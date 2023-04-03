@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO-DO App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 class="title">
+      spli <br />
+      tter
+    </h2>
+    <div class="card">
+      <div class="card-container">
+        <div class="inputs-section">
+          <div class="bill-sec">
+            <label for="bill">Bill</label>
+            <div class="bill-input">
+              <input type="text" placeholder="0" id="bill" />
+              <img src="./assets/icon-dollar.svg" alt="person" />
+            </div>
+          </div>
+          <div class="tip-sec">
+            <label for="tip">Select Tip %</label>
+            <div class="tip-btns">
+              <div>
+                <button>5%</button>
+                <button>10%</button>
+                <button>15%</button>
+              </div>
+              <div>
+                <button>25%</button>
+                <button>50%</button>
+                <input type="number" placeholder="Custom" id="custom"/>
+              </div>
+            </div>
+          </div>
+          <div class="people-sec">
+            <label for="people">Number of People</label>
+            <div class="people-input">
+              <input type="text" placeholder="0" id="people" />
+              <img src="./assets/icon-person.svg" alt="person" />
+            </div>
+          </div>
+        </div>
+        <div class="outputs-section">
+          <div class="tip-amount">
+            <p>Tip Amount<br /><span>/ person</span></p>
+            <h2 id="tipAmount">$0.00</h2>
+          </div>
+          <div class="total">
+            <p>Total<br /><span>/ person</span></p>
+            <h2 id="total">$0.00</h2>
+          </div>
+          <button class="reset-btn" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
-</head>
-<body>
-    <div class = "background-img">
-        <img src="./assets/bg-desktop-dark.jpg">
-    </div>
-
-    <div class ="mainContainer">
-        <div class = "header">
-            <div class = "title">
-                TODO
-            </div>
-            <div class ="theme">
-                <img src="./assets/icon-sun.svg" alt="">
-            </div>
-        </div>
-        <div class = "new-todo">
-            <div class = "check">
-                <div class = "check-mark">   
-                </div>
-            </div>
-            <div class ="new-todo-input">
-                <form onsubmit="addItem(event)">
-                    <input  type="text" placeholder="Create a new todo..."/>
-
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
+  </body>
 </html>
-
-
-
